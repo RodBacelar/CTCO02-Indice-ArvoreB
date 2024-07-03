@@ -22,6 +22,7 @@ pagina *criarPagina(int ordem, chave chv, pagina *filho, arvoreB *arv) {
   return novaPagina;
 }
 
+// Função para inicializar uma ArvoreB
 arvoreB *criarArvoreB(int ordem) {
   arvoreB *arv;
 
@@ -32,6 +33,7 @@ arvoreB *criarArvoreB(int ordem) {
   return arv;
 }
 
+// Função para recuperar a raiz da arvore
 pagina *getRaiz(arvoreB *arv) {return arv->raiz;}
 
 // Função que adiciona a chave na página
@@ -326,6 +328,8 @@ void removerChave(int chave, arvoreB *arv) {
     }
   }
   arv->raiz = pag;  // Atualiza raiz
+
+  printf("Chave Removida com Sucesso\n");
   return;
 }
 
@@ -345,7 +349,7 @@ int buscarChave(int mat, int *pos, struct pagina *pag) {
   return buscarChave(mat, pos, pag->filhos[*pos]); // Retorna o valor da chamada recursiva
 }
 
-
+// Função para criar uma nova chave
 chave criarChave(int mat, int linha) {
   chave chv;
   chv.mat = mat;

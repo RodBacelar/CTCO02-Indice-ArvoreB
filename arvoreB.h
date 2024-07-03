@@ -21,8 +21,10 @@ typedef struct arvoreB {
 // Função para criar uma nova página
 pagina *criarPagina(int ordem, chave chv, pagina *filho, arvoreB *arv);
 
+// Função para inicializar uma ArvoreB
 arvoreB *criarArvoreB(int ordem);
 
+// Função para recuperar a raiz da arvore
 pagina *getRaiz(arvoreB *arv);
 
 
